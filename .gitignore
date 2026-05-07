@@ -14,11 +14,11 @@ report.md
 research_paper.md
 PROJECT_ANALYSIS.md
 
-ex_fwd.exe
-ex_imp.exe
-ex_rev.exe 
-inv_eigen.exe 
-pde_solver.exe 
-test_correctness.exe
-bench.exe 
-autodiff_mlp.exe 
+ex_fwd
+ex_imp
+ex_rev
+inv_eigen
+pde_solver
+test_correctness
+bench
+autodiff_mlp
