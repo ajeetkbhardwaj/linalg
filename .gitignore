@@ -1,0 +1,24 @@
+# Build artifacts
+obj/
+lib/
+bin/
+build
+build.tmp
+.agents
+examples/
+docs/
+# OS generated files
+.DS_Store
+python/
+report.md
+research_paper.md
+PROJECT_ANALYSIS.md
+
+ex_fwd.exe
+ex_imp.exe
+ex_rev.exe 
+inv_eigen.exe 
+pde_solver.exe 
+test_correctness.exe
+bench.exe 
+autodiff_mlp.exe 

@@ -1,0 +1,27 @@
+name: m4linalg CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build_and_test:
+    name: Build and Test on Apple Silicon
+    runs-on: macos-latest # GitHub's macos-latest uses M-series ARM64 runners
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Build the Build Engine
+      run: clang -O3 build.c -o build
+
+    - name: Compile Library
+      run: ./build
+
+    - name: Run Correctness Tests
+      run: |
+        clang -O3 tests/test_correctness.c -I./include -L./lib -lm4linalg -o test_correctness
+        ./test_correctness
